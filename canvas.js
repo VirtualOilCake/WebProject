@@ -1,7 +1,21 @@
+$(document).ready(function(){
+    $('.datepicker').datepicker();
+  });
 
 var seed = 2;
 
 function paintCanvas() {
+
+    var nameInput = document.getElementById("nameInput");
+    var birthInput = document.getElementById("birthdayInput");
+
+    //console.log(birthInput.valueAsNumber);
+
+    if(!nameInput.value||!birthInput.value){
+        alert("Input should not be null.");
+        return;
+    }
+    
     // Get Canvas
     var canvas = document.querySelector("canvas");
 
@@ -13,12 +27,9 @@ function paintCanvas() {
     context2d.fillStyle = "black";
     context2d.fillRect(0, 0, width, height);
 
-    var nameInput = document.getElementById("nameInput");
-    var birthInput = document.getElementById("birthdayInput");
-    console.log(nameInput.value);
-    console.log(getHash(nameInput.value));
+    
 
-    var fullValue=nameInput.value+birthInput.value;
+    var fullValue=nameInput.value+birthInput.valueAsNumber;
 
     seed=getHash(fullValue);
 

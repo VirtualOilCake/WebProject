@@ -11,38 +11,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
         canvas {
-            border: 1px solid black;
+            border: 5px solid white;
             background-color: grey;
         }
 
         body {
             background-color: gainsboro;
-            padding-right: 20pt;
-            padding-left: 20pt;
         }
 
-        .limited {
+        .outer-limit {
             max-width: 720pt;
+        }
+        .canvas-card-limit{
+            max-width: 800px;
+            max-height: 800px;
+            margin: 0;
+            padding: 0;
+        }
+        .top-padding{
+            padding-top: 40pt;
+        }
+        .top-margin{
+            margin-top: 40pt;
         }
     </style>
 </head>
 
 <body>
-
+    <nav>
+        <div class="nav-wrapper blue-grey">
+          <a href="#" class="brand-logo center" >Quantum Wormhole</a>
+        </div>
+      </nav>
     <center>
-        <div  class="card-panel darken-1 limited" >
+        <div class="card-panel outer-limit z-depth-3 top-padding top-margin" >
             <span max-width="200px">
-                <h1>Quantum Wormhole</h1>
-                <canvas height="720" width="720"></canvas>
+                    <canvas height="720px" width="720px" class="z-depth-2"></canvas>
                 <p>
-                
                 <div class="row">
                     <div class="input-field col s6">
                         <input id="nameInput" type="text" class="validate">
                         <label for="nameInput">Full Name</label>
                     </div>
                     <div class="input-field col s6">
-                        <input id="birthdayInput" type="text" class="validate">
+                        <input type="date" id="birthdayInput" name="trip-start" >
+                          
                         <label for="birthdayInput">Birthday</label>
                     </div>
                 </div>
