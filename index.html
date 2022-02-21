@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas Test</title>
+
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        canvas {
+            border: 1px solid black;
+            background-color: grey;
+        }
+
+        body {
+            background-color: gainsboro;
+            padding-right: 20pt;
+            padding-left: 20pt;
+        }
+
+        .limited {
+            max-width: 720pt;
+        }
+    </style>
+</head>
+
+<body>
+
+    <center>
+        <div  class="card-panel darken-1 limited" >
+            <span max-width="200px">
+                <h1>Quantum Wormhole</h1>
+                <canvas height="720" width="720"></canvas>
+                <p>
+                
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="nameInput" type="text" class="validate">
+                        <label for="nameInput">Full Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="birthdayInput" type="text" class="validate">
+                        <label for="birthdayInput">Birthday</label>
+                    </div>
+                </div>
+                </p>
+                <p>
+                    <a class="waves-effect waves-light btn" onclick="paintCanvas()">Get</a>
+                </p>
+            </span>
+        </div>
+    </center>
+    <script type="text/javascript" src="canvas.js"></script>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+</body>
+
+</html>
